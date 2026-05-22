@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://ynaso6fy40mv"]
+
+[ext_resource type="Script" uid="uid://d2g3iftawhgon" path="res://gameHubEEtc/Menu/main_menu.gd" id="1_06t4h"]
+
+[node name="MainMenu" type="Control" unique_id=653582264]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+
+[node name="Label" type="Label" parent="." unique_id=845276976]
+layout_mode = 0
+offset_right = 1925.0
+offset_bottom = 135.0
+text = "Velvet Heist"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=455322757]
+layout_mode = 0
+offset_left = 808.0
+offset_top = 368.0
+offset_right = 1100.0
+offset_bottom = 448.0
+text = "Start"
+
+[node name="Button2" type="Button" parent="." unique_id=912503320]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 576.0
+offset_right = 1120.0
+offset_bottom = 656.0
+text = "Quit"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ndas58jurts0"]
+
+[ext_resource type="Script" uid="uid://bogmcsi2egixn" path="res://personagens/inimigos/inimigo.gd" id="1_0b8xr"]
+[ext_resource type="Texture2D" uid="uid://bnjwxudwtuue8" path="res://imagensSprites/icon.svg" id="2_g45jm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
+size = Vector2(115, 121)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_aqk2v"]
+points = PackedVector2Array(-400.32434, 32.072243, -307, 96, -288.04218, 23.49607)
+
+[node name="inimigo" type="StaticBody2D" unique_id=478533006 groups=["enemy"]]
+rotation = -1.5695587
+script = ExtResource("1_0b8xr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=4465614]
+modulate = Color(0.08, 0.08, 0.037600003, 1)
+position = Vector2(1, 1)
+texture = ExtResource("2_g45jm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1803201934]
+position = Vector2(-2, -1)
+shape = SubResource("RectangleShape2D_tlwt5")
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1631900750]
+position = Vector2(137, 616.00006)
+rotation = 1.2270072
+scale = Vector2(1.097973, 1.0519481)
+color = Color(0.91554236, 0.9103938, 1.540184e-06, 1)
+polygon = PackedVector2Array(-521, -58, -307, 96, -267, -55)
+uv = PackedVector2Array(-521, -58, -436, -6, -425, -66)
+
+[node name="VisionArea" type="Area2D" parent="." unique_id=1992927554]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionArea" unique_id=1618473893]
+position = Vector2(-445, 356)
+rotation = 3.2835264
+scale = Vector2(1.3010715, 3.6119468)
+shape = SubResource("ConvexPolygonShape2D_aqk2v")
+
+[connection signal="body_entered" from="VisionArea" to="." method="_on_vision_area_body_entered"]

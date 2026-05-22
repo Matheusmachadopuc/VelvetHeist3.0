@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cr8fxefwnymvr"]
+
+[ext_resource type="Script" uid="uid://ddt46ug00k5j4" path="res://fases/fase_1.gd" id="1_p804t"]
+[ext_resource type="PackedScene" uid="uid://d2bh0ixck0sbm" path="res://personagens/player/player.tscn" id="2_coorw"]
+[ext_resource type="Script" uid="uid://bareqk4qq1y5f" path="res://personagens/inimigos/caminhoInimigo.gd" id="3_gt2ii"]
+[ext_resource type="PackedScene" uid="uid://ndas58jurts0" path="res://personagens/inimigos/inimigo.tscn" id="4_o8gmr"]
+
+[sub_resource type="Curve2D" id="Curve2D_aqk2v"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 808, 0, 0, 0, 0, 1919, 805, 0, 0, 0, 0, 1919, 6, 0, 0, 0, 0, -2, 0)
+}
+point_count = 5
+
+[node name="fase1" type="Node2D" unique_id=128021620]
+script = ExtResource("1_p804t")
+
+[node name="Player" parent="." unique_id=1740235856 groups=["player"] instance=ExtResource("2_coorw")]
+position = Vector2(588, 331)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=952722855]
+curve = SubResource("Curve2D_aqk2v")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=761934362]
+rotation = 1.5695587
+script = ExtResource("3_gt2ii")
+
+[node name="inimigo" parent="Path2D/PathFollow2D" unique_id=478533006 instance=ExtResource("4_o8gmr")]

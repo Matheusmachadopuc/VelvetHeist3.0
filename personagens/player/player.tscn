@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://d2bh0ixck0sbm"]
+
+[ext_resource type="Texture2D" uid="uid://bnjwxudwtuue8" path="res://imagensSprites/icon.svg" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dymip81lsrgmj" path="res://personagens/player/player.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://do4l1pw34r4i8" path="res://plus/bullet.tscn" id="2_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(114, 116)
+
+[node name="Player" type="CharacterBody2D" unique_id=1740235856]
+script = ExtResource("1_onrkg")
+bullet_scene = ExtResource("2_i3pqv")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1689915104]
+texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=988465226]
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="origemTiro" type="Marker2D" parent="." unique_id=652004140]
+position = Vector2(72, 0)
+
+[node name="RayCast2D" type="RayCast2D" parent="origemTiro" unique_id=1955988984]
+target_position = Vector2(2000, 0)
+
+[node name="Line2D" type="Line2D" parent="origemTiro/RayCast2D" unique_id=1600910071]
+width = 2.0
+default_color = Color(1, 0, 0, 1)
