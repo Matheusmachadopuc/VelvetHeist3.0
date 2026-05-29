@@ -22,7 +22,7 @@ Global="*uid://cidcbre41ydny"
 [display]
 
 window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 
 [dotnet]
