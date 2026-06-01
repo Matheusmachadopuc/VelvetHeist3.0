@@ -43,16 +43,14 @@ func check_door_collision():
 		var collider = collision.get_collider()
 
 		if collider.is_in_group("door"):
-			win_game()
+			call_deferred("win_game")
 
 
 # 🔥 FUNÇÃO DE VITÓRIA
 func win_game():
 	print("Você venceu!")
-
-	get_tree().change_scene_to_file("res://gameHubEEtc/Menu/vitoria.tscn")
-
-
+	if get_tree():
+		get_tree().change_scene_to_file("res://gameHubEEtc/Menu/vitoria.tscn")
 func shoot():
 	var bullet = bullet_scene.instantiate()
 	bullet.global_position = $origemTiro.global_position
