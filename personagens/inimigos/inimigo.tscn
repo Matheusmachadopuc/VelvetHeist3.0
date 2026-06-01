@@ -11,6 +11,8 @@ points = PackedVector2Array(-400.32434, 32.072243, -307, 96, -288.04218, 23.4960
 
 [node name="inimigo" type="StaticBody2D" unique_id=478533006 groups=["enemy"]]
 rotation = -1.5695587
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_0b8xr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=4465614]

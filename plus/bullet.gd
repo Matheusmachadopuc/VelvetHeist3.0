@@ -9,6 +9,7 @@ func _physics_process(delta):
 
 
 func _on_body_entered(body):
+	print("hit: ", body.name, " | is enemy: ", body.is_in_group("enemy"))
 	if body.is_in_group("enemy"):
 		body.hit()
 	queue_free()

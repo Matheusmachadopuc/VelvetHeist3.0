@@ -31,8 +31,8 @@ project/assembly_name="Velter_Heist"
 
 [global_group]
 
-enemy=""
 player=""
+enemy=""
 
 [input]
 
