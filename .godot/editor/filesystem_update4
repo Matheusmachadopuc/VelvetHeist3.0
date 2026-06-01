@@ -1,7 +1,2 @@
-res://fases/fase_1.gd
-res://fases/porta_fase.gd
-res://gameHubEEtc/Menu/vitoria.tscn
-res://fases/fase1.tscn
-res://fases/portaFase.tscn
-res://gameHubEEtc/Menu/main_menu.gd
-res://personagens/player/player.gd
+res://personagens/player/player.tscn
+res://fases/FaseTeste.tscn

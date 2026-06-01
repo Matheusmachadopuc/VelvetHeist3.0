@@ -1,6 +1,7 @@
+TileMapLayer
+CollisionShape2D
 Node2D
 GraphFrame
 Label
 Sprite2D
 StaticBody2D
-CollisionShape2D
