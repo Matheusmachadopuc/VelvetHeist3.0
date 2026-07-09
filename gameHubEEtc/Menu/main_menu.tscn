@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bwjk04l3xth6x" path="res://imagensSprites/backgroundCyberpunk/front.png" id="5_72js7"]
 [ext_resource type="Shader" uid="uid://c663jokdsbvao" path="res://gameHubEEtc/Menu/main_menu.gdshader" id="6_3fiuf"]
 [ext_resource type="Texture2D" uid="uid://c50vdvfk8cpsc" path="res://imagensSprites/LogoJogo/Gemini_Generated_Image_311myy311myy311m-removebg-preview.png" id="7_72js7"]
+[ext_resource type="AudioStream" uid="uid://bv6x6py0t8qw6" path="res://Musiconas/2jogo furto quiet plin plin_Master.wav" id="8_72js7"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1q3g4"]
 shader = ExtResource("6_3fiuf")
@@ -76,6 +77,10 @@ offset_top = 576.0
 offset_right = 1120.0
 offset_bottom = 656.0
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1296094880]
+stream = ExtResource("8_72js7")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

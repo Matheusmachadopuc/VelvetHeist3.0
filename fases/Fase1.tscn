@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ndas58jurts0" path="res://personagens/inimigos/inimigo.tscn" id="9_6q6le"]
 [ext_resource type="PackedScene" uid="uid://bddgodd26arf3" path="res://fases/portaFase.tscn" id="10_3xd5u"]
 [ext_resource type="Script" uid="uid://dp1itqy4wodac" path="res://fases/porta_fase.gd" id="11_hl6xk"]
+[ext_resource type="AudioStream" uid="uid://rghyi07l4qvw" path="res://Musiconas/22222.ogg" id="12_u0kvm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ljbkr"]
 texture = ExtResource("2_u0kvm")
@@ -2423,3 +2424,8 @@ occluder = SubResource("OccluderPolygon2D_3fh2y")
 position = Vector2(244, 949)
 script = ExtResource("11_hl6xk")
 metadata/_edit_group_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1760876772]
+stream = ExtResource("12_u0kvm")
+volume_db = -19.158
+autoplay = true
