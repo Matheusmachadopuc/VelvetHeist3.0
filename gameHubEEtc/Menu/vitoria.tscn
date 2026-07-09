@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dsieyesu5u6pi"]
+
+[ext_resource type="Script" uid="uid://b2lf2rqg50frv" path="res://gameHubEEtc/Menu/vitoria.gd" id="1_g3gri"]
+
+[node name="Node2D" type="Node2D" unique_id=232026181]
+script = ExtResource("1_g3gri")
+
+[node name="vitoria" type="Label" parent="." unique_id=744906812]
+offset_left = 200.0
+offset_top = 54.0
+offset_right = 466.0
+offset_bottom = 265.0
+text = "Vitoria
+"
+
+[node name="VoltarHubButton" type="Button" parent="." unique_id=299350094]
+offset_left = 26.0
+offset_top = 55.0
+offset_right = 139.0
+offset_bottom = 86.0
+text = "Voltar ao hub"
+
+[node name="MoedasLabel" type="Label" parent="." unique_id=1702272219]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="BalasLabel" type="Label" parent="." unique_id=1856796967]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ComprarBalaButton" type="Button" parent="." unique_id=10442241]
+offset_left = 112.0
+offset_top = 101.0
+offset_right = 325.0
+offset_bottom = 132.0
+text = "Comprar bala — 3 moedas"
+
+[node name="MensagemLoja" type="Label" parent="." unique_id=343969796]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="ProximaFaseButton" type="Button" parent="." unique_id=1975278899]
+offset_left = 312.0
+offset_top = 22.0
+offset_right = 421.0
+offset_bottom = 53.0
+text = "Próxima fase"
+
+[node name="SairButton" type="Button" parent="." unique_id=1216874180]
+offset_left = 156.0
+offset_top = 13.0
+offset_right = 194.0
+offset_bottom = 44.0
+text = "Sair"
+
+[connection signal="pressed" from="VoltarHubButton" to="." method="_on_voltar_hub_button_pressed"]

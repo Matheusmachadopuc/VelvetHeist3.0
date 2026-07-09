@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://d2bh0ixck0sbm"]
+
+[ext_resource type="Script" uid="uid://dymip81lsrgmj" path="res://personagens/player/player.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://do4l1pw34r4i8" path="res://plus/bullet.tscn" id="2_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://ds0hjacr24h1v" path="res://personagens/player/ChatGPT_Image_8_de_jul._de_2026__09_15_18-removebg-preview.png" id="3_cfyub"]
+[ext_resource type="Texture2D" uid="uid://dx07dupiis6bj" path="res://imagensSprites/ChatGPT Image 5 de jun. de 2026, 10_11_02.png" id="4_m7xsi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7xsi"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(26, 236, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfyub"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(133, 236, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtyld"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(240, 236, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpnje"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(347, 236, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnfct"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(26, 354, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4dj1"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(133, 354, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rsph"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(240, 354, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ed0v"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(347, 354, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e66dq"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(26, 118, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inr21"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(133, 118, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ngkl"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(240, 118, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1gp1"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(347, 118, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6552"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(26, 0, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sjst"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(133, 0, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyh7a"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(240, 0, 107, 118)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kphvl"]
+atlas = ExtResource("3_cfyub")
+region = Rect2(347, 0, 107, 118)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hpnje"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7xsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfyub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtyld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpnje")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnfct")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4dj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rsph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ed0v")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e66dq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inr21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ngkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1gp1")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6552")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sjst")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyh7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kphvl")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m7xsi"]
+radius = 154.0
+height = 328.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1740235856 groups=["player"]]
+collision_layer = 253
+collision_mask = 253
+script = ExtResource("1_onrkg")
+bullet_scene = ExtResource("2_i3pqv")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=984242059]
+scale = Vector2(1.8925234, 1.8925233)
+sprite_frames = SubResource("SpriteFrames_hpnje")
+animation = &"right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=988465226 groups=["player"]]
+rotation = 1.5707964
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CapsuleShape2D_m7xsi")
+
+[node name="origemTiro" type="Marker2D" parent="." unique_id=652004140 groups=["player"]]
+position = Vector2(92, 0)
+
+[node name="Area2D" type="Area2D" parent="origemTiro" unique_id=1973322256 groups=["player"]]
+position = Vector2(-92, 0)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="origemTiro/Area2D" unique_id=1384584413 groups=["player"]]
+position = Vector2(110.58223, 131)
+scale = Vector2(0.99824613, 1)
+polygon = PackedVector2Array(-3, -114, 781, 58, 781, -294)
+
+[node name="RayCast2D" type="RayCast2D" parent="origemTiro" unique_id=1955988984 groups=["player"]]
+target_position = Vector2(2000, 0)
+
+[node name="Line2D" type="Line2D" parent="origemTiro/RayCast2D" unique_id=1600910071 groups=["player"]]
+width = 2.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="origemTiro" unique_id=1507292907 groups=["player"]]
+position = Vector2(20, 0)
+rotation = -1.5707964
+scale = Vector2(1, 0.6720558)
+color = Color(1, 0, 0, 0.58431375)
+energy = 2.56
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.93333334)
+texture = ExtResource("4_m7xsi")
+offset = Vector2(0, 580)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1810171479 groups=["player"]]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+
+[connection signal="body_entered" from="origemTiro/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="origemTiro/Area2D" to="." method="_on_area_2d_body_exited"]
