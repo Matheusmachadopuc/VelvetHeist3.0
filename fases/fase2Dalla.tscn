@@ -2387,7 +2387,6 @@ position = Vector2(974, 192)
 scale = Vector2(0.25, 0.25)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=529083419]
-visible = false
 position = Vector2(1839, 88)
 rotation = -1.5695587
 scale = Vector2(0.53058803, 0.2083861)
@@ -2398,7 +2397,7 @@ curve = SubResource("Curve2D_ykefp")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=411587941]
 position = Vector2(79, 80)
-rotation = -0.014439428
+rotation = -0.014439429
 script = ExtResource("7_2up4h")
 
 [node name="inimigo" parent="Path2D/PathFollow2D" unique_id=478533006 instance=ExtResource("8_2xt6s")]
@@ -2437,6 +2436,6 @@ script = ExtResource("7_2up4h")
 [node name="inimigo" parent="Path2D4/PathFollow2D" unique_id=139467081 instance=ExtResource("8_2xt6s")]
 position = Vector2(0.03741455, 8.000061)
 
-[node name="door" parent="." unique_id=1069083300 groups=["door"] instance=ExtResource("9_txnun")]
+[node name="door" parent="." unique_id=1069083300 instance=ExtResource("9_txnun")]
 position = Vector2(1915, 576)
 scale = Vector2(1, 1)

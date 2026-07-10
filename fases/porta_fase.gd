@@ -5,5 +5,7 @@ func _on_body_entered(body):
 		print("Você venceu!")
 
 		# Troca para tela de vitória
-		get_tree().change_scene_to_file("res://vitoria.tscn")
-		
+		if Global.current_level == 4:
+			get_tree().change_scene_to_file("res://historia/vitoria_tela.tscn")
+		else:
+			get_tree().change_scene_to_file("res://gameHubEEtc/Menu/vitoria.tscn")

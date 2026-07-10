@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dasf33t1jj0o3"]
+
+[ext_resource type="Script" uid="uid://djnvau53wvynb" path="res://historia/cutscene.gd" id="1_3nfai"]
+[ext_resource type="Texture2D" uid="uid://blvymdjh4jgni" path="res://historia/imagensHistoria/WhatsApp Image 2026-07-09 at 22.09.41.jpeg" id="2_yy7s0"]
+[ext_resource type="Texture2D" uid="uid://b4svxkn4blm4y" path="res://historia/imagensHistoria/WhatsApp Image 2026-07-09 at 22.09.44.jpeg" id="3_86wxe"]
+[ext_resource type="Texture2D" uid="uid://chuesimly6y86" path="res://historia/imagensHistoria/WhatsApp Image 2026-07-09 at 22.09.47.jpeg" id="4_i32b7"]
+[ext_resource type="Texture2D" uid="uid://cla1xan3ra7dn" path="res://historia/imagensHistoria/WhatsApp Image 2026-07-09 at 22.18.03.jpeg" id="5_10mqs"]
+[ext_resource type="Texture2D" uid="uid://bfvqvluvi6o2k" path="res://historia/imagensHistoria/WhatsApp Image 2026-07-09 at 22.52.44.jpeg" id="6_gax3d"]
+[ext_resource type="AudioStream" uid="uid://rghyi07l4qvw" path="res://Musiconas/22222.ogg" id="7_7xph8"]
+[ext_resource type="Texture2D" uid="uid://b6ypbg8nuu6wf" path="res://historia/imagensHistoria/Gemini_Generated_Image_i4u50di4u50di4u5.png" id="7_yy7s0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yy7s0"]
+bg_color = Color(0, 0.7182529, 0.3646201, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i32b7"]
+bg_color = Color(1.2513996e-06, 0.68737894, 0.68137974, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_86wxe"]
+bg_color = Color(0, 0.7254902, 0, 1)
+
+[node name="Historia" type="Control" unique_id=1464457821]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3nfai")
+imagens_historia = Array[Texture2D]([ExtResource("2_yy7s0"), ExtResource("3_86wxe"), ExtResource("4_i32b7"), ExtResource("5_10mqs"), ExtResource("6_gax3d")])
+
+[node name="imagemFundo" type="TextureRect" parent="." unique_id=979280654]
+layout_mode = 0
+offset_left = -387.0
+offset_top = -247.0
+offset_right = 2365.0
+offset_bottom = 1289.0
+texture = ExtResource("7_yy7s0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1509626115]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.9990001
+anchor_bottom = 0.99300003
+offset_right = -0.080078125
+offset_bottom = -0.44006348
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="." unique_id=1836691746]
+modulate = Color(0.7176192, 0.7227525, 0.7249517, 1)
+layout_mode = 0
+offset_left = 1299.0
+offset_top = 905.0
+offset_right = 1400.0
+offset_bottom = 993.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_yy7s0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i32b7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_86wxe")
+text = "Seguir ->"
+
+[node name="musicafundo" type="AudioStreamPlayer" parent="." unique_id=199780639]
+stream = ExtResource("7_7xph8")
+volume_db = -11.226
+autoplay = true
+
+[node name="somEfeito" type="AudioStreamPlayer" parent="." unique_id=1100086566]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

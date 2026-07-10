@@ -224,7 +224,7 @@ autoplay = "fogo"
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1777780221]
 position = Vector2(0, 2)
-scale = Vector2(5.1484376, 4.59375)
+scale = Vector2(2.5742188, 2.296875)
 color = Color(0.995104, 0.4221714, 0.35181713, 1)
 energy = 3.7
 shadow_enabled = true

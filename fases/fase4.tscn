@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bddgodd26arf3" path="res://fases/portaFase.tscn" id="4_id7sy"]
 [ext_resource type="Script" uid="uid://bareqk4qq1y5f" path="res://personagens/inimigos/caminhoInimigo.gd" id="5_unbrq"]
 [ext_resource type="PackedScene" uid="uid://ndas58jurts0" path="res://personagens/inimigos/inimigo.tscn" id="6_sv684"]
+[ext_resource type="AudioStream" uid="uid://rghyi07l4qvw" path="res://Musiconas/22222.ogg" id="7_koroh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_la6ux"]
 texture = ExtResource("2_koroh")
@@ -540,17 +541,17 @@ sources/0 = SubResource("TileSetAtlasSource_j8j31")
 
 [sub_resource type="Curve2D" id="Curve2D_q65om"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 682, 137, 0, 0, 0, 0, 668, 1030, 0, 0, 0, 0, 682, 137)
+"points": PackedVector2Array(0, 0, 0, 0, 672, 139, 0, 0, 0, 0, 657, 585, 0, 0, 0, 0, 670, 137)
 }
 point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_koroh"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 558, 979, 0, 0, 0, 0, 552, 130, 0, 0, 0, 0, 556, 979)
+"points": PackedVector2Array(0, 0, 0, 0, 560, 977, 0, 0, 0, 0, 553, 500, 0, 0, 0, 0, 560, 973)
 }
 point_count = 3
 
-[node name="Fase4" type="Node2D" unique_id=1207632394]
+[node name="Fase3" type="Node2D" unique_id=1207632394]
 script = ExtResource("1_q65om")
 
 [node name="TileMapLayerFloor" type="TileMapLayer" parent="." unique_id=834386680]
@@ -564,7 +565,6 @@ tile_map_data = PackedByteArray("AAAAAAAAAAACAAkAAFAAAAkAAAACAAkAAAAAAAoAAAACAAk
 tile_set = SubResource("TileSet_rddqt")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=529083419]
-visible = false
 position = Vector2(1839, 88)
 rotation = -1.5695587
 scale = Vector2(0.53058803, 0.2083861)
@@ -574,7 +574,7 @@ color = Color(0.050708726, 0.07016479, 0.09985284, 1)
 position = Vector2(208, 694)
 scale = Vector2(0.25, 0.25)
 
-[node name="door" parent="." unique_id=1069083300 groups=["door"] instance=ExtResource("4_id7sy")]
+[node name="door" parent="." unique_id=1069083300 instance=ExtResource("4_id7sy")]
 position = Vector2(1915, 576)
 scale = Vector2(1, 1)
 
@@ -582,8 +582,8 @@ scale = Vector2(1, 1)
 curve = SubResource("Curve2D_q65om")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=749272034]
-position = Vector2(682, 137)
-rotation = 1.5864725
+position = Vector2(672, 139)
+rotation = 1.6044159
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D/PathFollow2D" unique_id=478533006 instance=ExtResource("6_sv684")]
@@ -595,8 +595,8 @@ position = Vector2(200, 0)
 curve = SubResource("Curve2D_q65om")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D2" unique_id=1089143870]
-position = Vector2(682, 137)
-rotation = 1.5864725
+position = Vector2(672, 139)
+rotation = 1.6044159
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D2/PathFollow2D" unique_id=783888660 instance=ExtResource("6_sv684")]
@@ -608,8 +608,8 @@ position = Vector2(400, 0)
 curve = SubResource("Curve2D_q65om")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D3" unique_id=1867758826]
-position = Vector2(682, 137)
-rotation = 1.5864725
+position = Vector2(672, 139)
+rotation = 1.6044159
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D3/PathFollow2D" unique_id=119166835 instance=ExtResource("6_sv684")]
@@ -621,8 +621,8 @@ position = Vector2(600, 0)
 curve = SubResource("Curve2D_q65om")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D4" unique_id=1932944917]
-position = Vector2(682, 137)
-rotation = 1.5864725
+position = Vector2(672, 139)
+rotation = 1.6044159
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D4/PathFollow2D" unique_id=966453205 instance=ExtResource("6_sv684")]
@@ -634,8 +634,8 @@ position = Vector2(800, 0)
 curve = SubResource("Curve2D_q65om")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D5" unique_id=133904322]
-position = Vector2(682, 137)
-rotation = 1.5864725
+position = Vector2(672, 139)
+rotation = 1.6044159
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D5/PathFollow2D" unique_id=2050930092 instance=ExtResource("6_sv684")]
@@ -647,8 +647,8 @@ position = Vector2(1000, 0)
 curve = SubResource("Curve2D_q65om")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D6" unique_id=988877017]
-position = Vector2(682, 137)
-rotation = 1.5864725
+position = Vector2(672, 139)
+rotation = 1.6044159
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D6/PathFollow2D" unique_id=647825257 instance=ExtResource("6_sv684")]
@@ -659,8 +659,8 @@ scale = Vector2(0.5, 0.5)
 curve = SubResource("Curve2D_koroh")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D7" unique_id=1340989471]
-position = Vector2(558, 979)
-rotation = -1.5778633
+position = Vector2(560, 977)
+rotation = -1.5854703
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D7/PathFollow2D" unique_id=1805384203 instance=ExtResource("6_sv684")]
@@ -672,8 +672,8 @@ position = Vector2(200, 0)
 curve = SubResource("Curve2D_koroh")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D8" unique_id=723142700]
-position = Vector2(558, 979)
-rotation = -1.5778633
+position = Vector2(560, 977)
+rotation = -1.5854703
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D8/PathFollow2D" unique_id=1070841732 instance=ExtResource("6_sv684")]
@@ -685,8 +685,8 @@ position = Vector2(400, 0)
 curve = SubResource("Curve2D_koroh")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D9" unique_id=1788248819]
-position = Vector2(558, 979)
-rotation = -1.5778633
+position = Vector2(560, 977)
+rotation = -1.5854703
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D9/PathFollow2D" unique_id=1110069444 instance=ExtResource("6_sv684")]
@@ -698,8 +698,8 @@ position = Vector2(600, 0)
 curve = SubResource("Curve2D_koroh")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D10" unique_id=796968368]
-position = Vector2(558, 979)
-rotation = -1.5778633
+position = Vector2(560, 977)
+rotation = -1.5854703
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D10/PathFollow2D" unique_id=1921203903 instance=ExtResource("6_sv684")]
@@ -711,8 +711,8 @@ position = Vector2(800, 0)
 curve = SubResource("Curve2D_koroh")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D11" unique_id=878782182]
-position = Vector2(558, 979)
-rotation = -1.5778633
+position = Vector2(560, 977)
+rotation = -1.5854703
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D11/PathFollow2D" unique_id=1655387362 instance=ExtResource("6_sv684")]
@@ -724,10 +724,15 @@ position = Vector2(1000, 0)
 curve = SubResource("Curve2D_koroh")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D12" unique_id=164988130]
-position = Vector2(558, 979)
-rotation = -1.5778633
+position = Vector2(560, 977)
+rotation = -1.5854703
 script = ExtResource("5_unbrq")
 
 [node name="inimigo" parent="Path2D12/PathFollow2D" unique_id=1688213073 instance=ExtResource("6_sv684")]
 position = Vector2(0.03741455, 8.000061)
 scale = Vector2(0.5, 0.5)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=908685188]
+stream = ExtResource("7_koroh")
+volume_db = -19.158
+autoplay = true

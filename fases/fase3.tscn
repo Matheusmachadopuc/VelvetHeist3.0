@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://d0nruxtbln0ym"]
 
 [ext_resource type="Texture2D" uid="uid://bg2eemvugoi6u" path="res://imagensSprites/Tech Dungeon Roguelite - Asset Pack (DEMO)/tileset x1.png" id="2_fc1ct"]
+[ext_resource type="AudioStream" uid="uid://rghyi07l4qvw" path="res://Musiconas/22222.ogg" id="7_8hcdr"]
 [ext_resource type="PackedScene" uid="uid://d2bh0ixck0sbm" path="res://personagens/player/player.tscn" id="7_aunp1"]
 [ext_resource type="Script" uid="uid://bareqk4qq1y5f" path="res://personagens/inimigos/caminhoInimigo.gd" id="8_tdakm"]
 [ext_resource type="PackedScene" uid="uid://ndas58jurts0" path="res://personagens/inimigos/inimigo.tscn" id="9_vfvfd"]
@@ -610,6 +611,39 @@ _data = {
 }
 point_count = 5
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2s2ce"]
+polygon = PackedVector2Array(130, 175, 130, 432, 402, 432, 402, 175)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_8hcdr"]
+polygon = PackedVector2Array(466, 33, 658, 32, 658, 224, 464, 223)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ykefp"]
+polygon = PackedVector2Array(721, 192, 977, 193, 978, 433, 721, 432)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_txnun"]
+polygon = PackedVector2Array(401, 494, 690, 497, 690, 753, 402, 753)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_3kmh7"]
+polygon = PackedVector2Array(161, 800, 402, 801, 402, 1026, 162, 1024)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_o50ha"]
+polygon = PackedVector2Array(770, 768, 1042, 768, 1041, 1026, 769, 1024)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pogk1"]
+polygon = PackedVector2Array(1041, 449, 1282, 449, 1282, 673, 1041, 672)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ltw2a"]
+polygon = PackedVector2Array(1040, 48, 1217, 48, 1217, 208, 1040, 208)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2up4h"]
+polygon = PackedVector2Array(1265, 111, 1553, 114, 1553, 352, 1265, 352)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2xt6s"]
+polygon = PackedVector2Array(1634, 64, 1858, 65, 1857, 255, 1633, 256)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_j6m5e"]
+polygon = PackedVector2Array(1569, 416, 1794, 416, 1793, 642, 1569, 641)
+
 [node name="Fase3" type="Node2D" unique_id=1207632394]
 script = ExtResource("11_fase3")
 
@@ -642,7 +676,7 @@ curve = SubResource("Curve2D_rddqt")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=1020840343]
 position = Vector2(80, 142)
-rotation = 1.5829908
+rotation = 1.5829909
 script = ExtResource("8_tdakm")
 
 [node name="inimigo" parent="Path2D/PathFollow2D" unique_id=478533006 instance=ExtResource("9_vfvfd")]
@@ -731,7 +765,7 @@ curve = SubResource("Curve2D_iwcnp")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D8" unique_id=874553666]
 position = Vector2(1013, 38)
-rotation = 1.5468774
+rotation = 1.5468775
 script = ExtResource("8_tdakm")
 
 [node name="inimigo" parent="Path2D8/PathFollow2D" unique_id=1712106931 instance=ExtResource("9_vfvfd")]
@@ -785,3 +819,43 @@ script = ExtResource("8_tdakm")
 [node name="inimigo" parent="Path2D12/PathFollow2D" unique_id=1211666173 instance=ExtResource("9_vfvfd")]
 position = Vector2(0.03741455, 8.000061)
 scale = Vector2(0.5, 0.5)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="." unique_id=2000353929]
+occluder = SubResource("OccluderPolygon2D_2s2ce")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="." unique_id=139610777]
+occluder = SubResource("OccluderPolygon2D_8hcdr")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="." unique_id=941413364]
+occluder = SubResource("OccluderPolygon2D_ykefp")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="." unique_id=1972808575]
+occluder = SubResource("OccluderPolygon2D_txnun")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="." unique_id=1125452265]
+occluder = SubResource("OccluderPolygon2D_3kmh7")
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="." unique_id=1251861729]
+occluder = SubResource("OccluderPolygon2D_o50ha")
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="." unique_id=778910932]
+occluder = SubResource("OccluderPolygon2D_pogk1")
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="." unique_id=1571286957]
+occluder = SubResource("OccluderPolygon2D_ltw2a")
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="." unique_id=1162919144]
+occluder = SubResource("OccluderPolygon2D_2up4h")
+
+[node name="LightOccluder2D10" type="LightOccluder2D" parent="." unique_id=1799682513]
+occluder = SubResource("OccluderPolygon2D_2xt6s")
+
+[node name="LightOccluder2D11" type="LightOccluder2D" parent="." unique_id=1884237823]
+occluder = SubResource("OccluderPolygon2D_j6m5e")
+
+[node name="LightOccluder2D12" type="LightOccluder2D" parent="." unique_id=206289024]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1870262665]
+stream = ExtResource("7_8hcdr")
+volume_db = -19.158
+autoplay = true

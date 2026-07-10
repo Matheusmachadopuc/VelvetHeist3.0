@@ -8,7 +8,7 @@
 [ext_resource type="Shader" uid="uid://c663jokdsbvao" path="res://gameHubEEtc/Menu/main_menu.gdshader" id="6_3fiuf"]
 [ext_resource type="Texture2D" uid="uid://c50vdvfk8cpsc" path="res://imagensSprites/LogoJogo/Gemini_Generated_Image_311myy311myy311m-removebg-preview.png" id="7_72js7"]
 [ext_resource type="AudioStream" uid="uid://bv6x6py0t8qw6" path="res://Musiconas/2jogo furto quiet plin plin_Master.wav" id="8_72js7"]
-[ext_resource type="Theme" path="res://gameHubEEtc/Menu/cyberpunk_theme.tres" id="9_theme"]
+[ext_resource type="Theme" uid="uid://y1jjlvxk8et1" path="res://gameHubEEtc/Menu/cyberpunk_theme.tres" id="9_theme"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1q3g4"]
 shader = ExtResource("6_3fiuf")

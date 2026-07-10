@@ -204,9 +204,12 @@ func win_game():
 	print("Moedas recebidas:", recompensa)
 	print("Total de moedas:", Global.get_coins())
 
-	get_tree().change_scene_to_file(
-		"res://gameHubEEtc/Menu/vitoria.tscn"
-	)
+	if Global.current_level == 4:
+		get_tree().change_scene_to_file("res://historia/vitoria_tela.tscn")
+	else:
+		get_tree().change_scene_to_file(
+			"res://gameHubEEtc/Menu/vitoria.tscn"
+		)
 
 func die():
 	if not is_physics_processing():
