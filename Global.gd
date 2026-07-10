@@ -96,6 +96,10 @@ func start_level(level_number: int) -> void:
 	last_reward = 0
 	last_level_time = 0.0
 
+	if _total_bullets <= 0:
+		_total_bullets=1
+		bullets_changed.emit(get_bullets())
+		save_game()
 
 func get_level_time() -> float:
 	if _level_start_msec <= 0:
