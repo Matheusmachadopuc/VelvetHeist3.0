@@ -38,3 +38,38 @@ func check_line_of_sight(player):
 
 		if collider == player:
 			player_caught(player)
+			
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D # Make sure this matches your node's name
+  
+func update_animation(movimento: Vector2) -> void:
+	if not is_instance_valid(animated_sprite):
+		return
+
+	# Keep the sprite upright relative to the screen
+	animated_sprite.global_rotation = 0.0
+
+	if movimento.length_squared() < 0.001:
+		animated_sprite.stop()
+		return
+	
+	var nova_animacao: String
+	var deve_reverter: bool = false
+	
+	if abs(movimento.x) > abs(movimento.y):
+		if movimento.x > 0:
+			nova_animacao = "right"
+			deve_reverter = true # Set flag to play backwards
+		else:
+			nova_animacao = "left"
+	else:	
+		if movimento.y > 0:
+			nova_animacao = "down"
+		else:
+			nova_animacao = "up"
+	
+	# Update the animation and play direction
+	if animated_sprite.animation != nova_animacao or not animated_sprite.is_playing():
+		if deve_reverter:
+			animated_sprite.play_backwards(nova_animacao)
+		else:
+			animated_sprite.play(nova_animacao)

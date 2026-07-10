@@ -37,6 +37,11 @@ func _process(delta: float) -> void:
 
 	# Descobre para qual direção o inimigo está andando
 	var movimento = global_position - posicao_anterior
+	
+	if inimigo.has_method("update_animation"):
+		inimigo.update_animation(movimento)                                                                                                                                            
+		if movimento.length_squared() < 0.001:
+			return
 
 	if movimento.length_squared() < 0.001:
 		return
