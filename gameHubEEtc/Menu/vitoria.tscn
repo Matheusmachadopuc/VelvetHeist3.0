@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://dsieyesu5u6pi"]
+
+[ext_resource type="Script" uid="uid://b2lf2rqg50frv" path="res://gameHubEEtc/Menu/vitoria.gd" id="1_g3gri"]
+[ext_resource type="Theme" uid="uid://y1jjlvxk8et1" path="res://gameHubEEtc/Menu/cyberpunk_theme.tres" id="2_theme"]
+[ext_resource type="Texture2D" uid="uid://3fquj2sfbvax" path="res://imagensSprites/backgroundCyberpunk/buildings.png" id="3_bg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.0705882, 0.054902, 0.0862745, 0.901961)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 0, 0.498039, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(1, 0, 0.498039, 0.3)
+shadow_size = 16
+
+[node name="VictoryMenu" type="Control" unique_id=208638583]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_g3gri")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2047839266]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=725804789]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0431373, 0.0352941, 0.0627451, 0.862745)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1969362312]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=963663875]
+custom_minimum_size = Vector2(580, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=2019185172]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=815076050]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="vitoria" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=744906812]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0.498039, 1)
+theme_override_font_sizes/font_size = 48
+text = "VICTORY!"
+horizontal_alignment = 1
+
+[node name="StatsContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1512469094]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MoedasLabel" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/StatsContainer" unique_id=1702272219]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Moedas: 0"
+horizontal_alignment = 1
+
+[node name="BalasLabel" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/StatsContainer" unique_id=1856796967]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Balas: 0"
+horizontal_alignment = 1
+
+[node name="MensagemLoja" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/StatsContainer" unique_id=343969796]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.941176, 1, 1)
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ButtonsContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=842747210]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ProximaFaseButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonsContainer" unique_id=1975278899]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Próxima Fase"
+
+[node name="ComprarBalaButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonsContainer" unique_id=10442241]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Comprar Bala (3 Moedas)"
+
+[node name="VoltarHubButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonsContainer" unique_id=299350094]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Voltar ao Hub"
+
+[node name="SairButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonsContainer" unique_id=1216874180]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Sair"
+
+[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/ButtonsContainer/VoltarHubButton" to="." method="_on_voltar_hub_button_pressed"]

@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://ndas58jurts0"]
+
+[ext_resource type="Script" uid="uid://bogmcsi2egixn" path="res://personagens/inimigos/inimigo.gd" id="1_0b8xr"]
+[ext_resource type="Texture2D" uid="uid://q1ndexll28iw" path="res://personagens/inimigos/inimigov2.png" id="2_jniwt"]
+[ext_resource type="Texture2D" uid="uid://dx07dupiis6bj" path="res://imagensSprites/ChatGPT Image 5 de jun. de 2026, 10_11_02.png" id="3_jniwt"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jniwt"]
+light_mode = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kha6r"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(79, 606, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxvei"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(349, 606, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ej3c8"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(619, 606, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdvg2"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(889, 606, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1iqca"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(62, 909, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ch7kk"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(332, 909, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijrp5"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(602, 909, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hh6g"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(872, 909, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f231h"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(79, 303, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t44i1"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(349, 303, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nanps"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(619, 303, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu72w"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(889, 303, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f864p"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(77, 12, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4rbh"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(347, 12, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ugic2"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(617, 12, 270, 303)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yaivb"]
+atlas = ExtResource("2_jniwt")
+region = Rect2(887, 12, 270, 303)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f864p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kha6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxvei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ej3c8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdvg2")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1iqca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ch7kk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijrp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hh6g")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f231h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t44i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nanps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yu72w")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f864p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4rbh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ugic2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yaivb")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
+size = Vector2(115, 121)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_aqk2v"]
+points = PackedVector2Array(-400.32434, 32.072243, -307, 96, -288.04218, 23.49607)
+
+[node name="inimigo" type="StaticBody2D" unique_id=478533006 groups=["enemy"]]
+rotation = -1.5695587
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("1_0b8xr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1060616877]
+material = SubResource("CanvasItemMaterial_jniwt")
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_f864p")
+animation = &"up"
+frame_progress = 0.026129313
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1803201934 groups=["enemy"]]
+shape = SubResource("RectangleShape2D_tlwt5")
+metadata/_edit_group_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1631900750 groups=["enemy"]]
+position = Vector2(137, 616.00006)
+rotation = 1.2270072
+scale = Vector2(1.097973, 1.0519481)
+color = Color(0.8352941, 0.9372549, 0, 0)
+polygon = PackedVector2Array(-521, -58, -307, 96, -267, -55)
+uv = PackedVector2Array(-521, -58, -436, -6, -425, -66)
+
+[node name="VisionArea" type="Area2D" parent="." unique_id=1992927554 groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisionArea" unique_id=1618473893 groups=["enemy"]]
+position = Vector2(-445, 356)
+rotation = 3.2835264
+scale = Vector2(1.3010715, 3.6119468)
+shape = SubResource("ConvexPolygonShape2D_aqk2v")
+debug_color = Color(0, 0.6, 0.69803923, 0.6745098)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=667026383 groups=["enemy"]]
+z_index = 1
+scale = Vector2(0.4655814, 0.22734831)
+color = Color(0.4700758, 0.47007585, 0.47007567, 0.57254905)
+energy = 1.2
+shadow_enabled = true
+shadow_color = Color(0, 0, 0, 0.69411767)
+texture = ExtResource("3_jniwt")
+offset = Vector2(0, 845)
+
+[connection signal="body_entered" from="VisionArea" to="." method="_on_vision_area_body_entered"]
