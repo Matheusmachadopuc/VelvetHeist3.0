@@ -180,13 +180,13 @@ debug_color = Color(0, 0.6, 0.69803923, 0.6745098)
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=667026383 groups=["enemy"]]
 z_index = 1
-position = Vector2(-5.7623787, 192.00728)
+position = Vector2(0, 0)
 scale = Vector2(0.4655814, 0.22734831)
 color = Color(0.4700758, 0.47007585, 0.47007567, 0.57254905)
 energy = 1.2
 shadow_enabled = true
 shadow_color = Color(0, 0, 0, 0.69411767)
 texture = ExtResource("3_jniwt")
-offset = Vector2(20, 0)
+offset = Vector2(0, 845)
 
 [connection signal="body_entered" from="VisionArea" to="." method="_on_vision_area_body_entered"]

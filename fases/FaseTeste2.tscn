@@ -989,3 +989,4 @@ tile_set = SubResource("TileSet_ljbkr")
 
 [node name="Player" parent="." unique_id=1740235856 instance=ExtResource("4_d3x31")]
 position = Vector2(155, 194)
+scale = Vector2(0.2, 0.2)

@@ -86,6 +86,9 @@ func _on_comprar_bala_button_pressed() -> void:
 
 func verificar_proxima_fase() -> void:
 	var caminho = Global.get_next_level_path()
+	print("[DEBUG] current_level: ", Global.current_level)
+	print("[DEBUG] next_level path: ", caminho)
+	print("[DEBUG] exists check: ", ResourceLoader.exists(caminho))
 
 	if ResourceLoader.exists(caminho):
 		proxima_fase_button.disabled = false

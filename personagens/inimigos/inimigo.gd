@@ -36,7 +36,6 @@ func has_line_of_sight(target: Node2D) -> bool:
 	return result.get("collider") == target
 
 func _on_vision_area_body_entered(body):
-	# Kept to prevent signal errors in the editor, checks are handled in _physics_process
 	pass
 
 

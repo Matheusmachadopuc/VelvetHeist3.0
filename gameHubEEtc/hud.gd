@@ -65,3 +65,10 @@ func _on_timer_expired() -> void:
 			get_tree().reload_current_scene()
 	else:
 		get_tree().reload_current_scene()
+
+
+func show_death_screen() -> void:
+	var death_screen = get_node_or_null("Control/DeathScreen")
+	if death_screen:
+		death_screen.visible = true
+

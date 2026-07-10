@@ -209,7 +209,24 @@ func win_game():
 	)
 
 func die():
+	if not is_physics_processing():
+		return
+	
+	# Stop physics processing to freeze the player in place
+	set_physics_process(false)
+	set_process(false)
+	
+	# Show the death overlay on the HUD
+	var hud = get_node_or_null("HUD")
+	if hud and hud.has_method("show_death_screen"):
+		hud.show_death_screen()
+		
+	# Wait for 2 seconds
+	await get_tree().create_timer(2.0).timeout
+	
+	# Reload
 	get_tree().reload_current_scene()
+
 
 
 func _on_area_2d_body_entered(body):
