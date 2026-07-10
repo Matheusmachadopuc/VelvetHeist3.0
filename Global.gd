@@ -97,7 +97,7 @@ func start_level(level_number: int) -> void:
 	last_level_time = 0.0
 
 	if _total_bullets <= 0:
-		_total_bullets=1
+		_total_bullets=0
 		bullets_changed.emit(get_bullets())
 		#save_game()
 
