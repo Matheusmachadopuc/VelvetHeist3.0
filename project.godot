@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Velter_Heist"
-run/main_scene="uid://r8pv72fcqimx"
+run/main_scene="uid://ynaso6fy40mv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://imagensSprites/icon.svg"
 
