@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://d0cfu5fyhqduf"]
 
-[ext_resource type="Script" uid="uid://cr0q3tmsu0w8e" path="res://fases/fase_3.gd" id="1_q65om"]
+[ext_resource type="Script" uid="uid://bplmt4us86qqu" path="res://fase_4.gd" id="1_q65om"]
 [ext_resource type="Texture2D" uid="uid://bg2eemvugoi6u" path="res://imagensSprites/Tech Dungeon Roguelite - Asset Pack (DEMO)/tileset x1.png" id="2_koroh"]
 [ext_resource type="PackedScene" uid="uid://d2bh0ixck0sbm" path="res://personagens/player/player.tscn" id="3_tc63s"]
 [ext_resource type="PackedScene" uid="uid://bddgodd26arf3" path="res://fases/portaFase.tscn" id="4_id7sy"]
@@ -550,7 +550,7 @@ _data = {
 }
 point_count = 3
 
-[node name="Fase3" type="Node2D" unique_id=1207632394]
+[node name="Fase4" type="Node2D" unique_id=1207632394]
 script = ExtResource("1_q65om")
 
 [node name="TileMapLayerFloor" type="TileMapLayer" parent="." unique_id=834386680]
@@ -564,6 +564,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAACAAkAAFAAAAkAAAACAAkAAAAAAAoAAAACAAk
 tile_set = SubResource("TileSet_rddqt")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=529083419]
+visible = false
 position = Vector2(1839, 88)
 rotation = -1.5695587
 scale = Vector2(0.53058803, 0.2083861)
@@ -573,7 +574,7 @@ color = Color(0.050708726, 0.07016479, 0.09985284, 1)
 position = Vector2(208, 694)
 scale = Vector2(0.25, 0.25)
 
-[node name="door" parent="." unique_id=1069083300 instance=ExtResource("4_id7sy")]
+[node name="door" parent="." unique_id=1069083300 groups=["door"] instance=ExtResource("4_id7sy")]
 position = Vector2(1915, 576)
 scale = Vector2(1, 1)
 

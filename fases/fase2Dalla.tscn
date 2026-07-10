@@ -2437,6 +2437,6 @@ script = ExtResource("7_2up4h")
 [node name="inimigo" parent="Path2D4/PathFollow2D" unique_id=139467081 instance=ExtResource("8_2xt6s")]
 position = Vector2(0.03741455, 8.000061)
 
-[node name="door" parent="." unique_id=1069083300 instance=ExtResource("9_txnun")]
+[node name="door" parent="." unique_id=1069083300 groups=["door"] instance=ExtResource("9_txnun")]
 position = Vector2(1915, 576)
 scale = Vector2(1, 1)

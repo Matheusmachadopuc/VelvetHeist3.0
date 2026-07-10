@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://btfa7sytwarfj"]
 
-[ext_resource type="Script" uid="uid://cr0q3tmsu0w8e" path="res://fases/fase_3.gd" id="1_eqlhf"]
+[ext_resource type="Script" path="res://fases/fase_5.gd" id="1_eqlhf"]
 [ext_resource type="Texture2D" uid="uid://bg2eemvugoi6u" path="res://imagensSprites/Tech Dungeon Roguelite - Asset Pack (DEMO)/tileset x1.png" id="2_1ln3h"]
 [ext_resource type="PackedScene" uid="uid://d2bh0ixck0sbm" path="res://personagens/player/player.tscn" id="3_n2da5"]
 [ext_resource type="PackedScene" uid="uid://bddgodd26arf3" path="res://fases/portaFase.tscn" id="4_jml6w"]
@@ -560,7 +560,7 @@ color = Color(0.050708726, 0.07016479, 0.09985284, 1)
 position = Vector2(203, 642)
 scale = Vector2(0.25, 0.25)
 
-[node name="door" parent="." unique_id=1069083300 instance=ExtResource("4_jml6w")]
+[node name="door" parent="." unique_id=1069083300 groups=["door"] instance=ExtResource("4_jml6w")]
 position = Vector2(1915, 576)
 scale = Vector2(1, 1)
 
