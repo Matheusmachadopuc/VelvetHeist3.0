@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://csxwvia43jo0s"]
+[gd_scene format=4 uid="uid://cuv8go03oi0jh"]
 
 [ext_resource type="Script" uid="uid://b43ye6ifrgtuj" path="res://fases/fase_teste.gd" id="1_ugu5n"]
 [ext_resource type="Texture2D" uid="uid://bg2eemvugoi6u" path="res://imagensSprites/Tech Dungeon Roguelite - Asset Pack (DEMO)/tileset x1.png" id="2_u0kvm"]
