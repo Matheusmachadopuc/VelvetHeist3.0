@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cr8fxefwnymvr"]
 
-[ext_resource type="Script" uid="uid://ddt46ug00k5j4" path="res://fases/fase_12.gd" id="1_rbvkp"]
+[ext_resource type="Script" uid="uid://ddt46ug00k5j4" path="res://fases/fase_2.gd" id="1_rbvkp"]
 [ext_resource type="PackedScene" uid="uid://d2bh0ixck0sbm" path="res://personagens/player/player.tscn" id="2_d7liu"]
 [ext_resource type="Script" uid="uid://bareqk4qq1y5f" path="res://personagens/inimigos/caminhoInimigo.gd" id="3_pjt3i"]
 [ext_resource type="PackedScene" uid="uid://ndas58jurts0" path="res://personagens/inimigos/inimigo.tscn" id="4_633uj"]

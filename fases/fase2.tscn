@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ndas58jurts0" path="res://personagens/inimigos/inimigo.tscn" id="8_2xt6s"]
 [ext_resource type="PackedScene" uid="uid://bddgodd26arf3" path="res://fases/portaFase.tscn" id="9_txnun"]
 [ext_resource type="Script" uid="uid://dp1itqy4wodac" path="res://fases/porta_fase.gd" id="10_3kmh7"]
-[ext_resource type="Script" uid="uid://ddt46ug00k5j4" path="res://fases/fase_12.gd" id="11_fase12"]
+[ext_resource type="Script" uid="uid://ddt46ug00k5j4" path="res://fases/fase_2.gd" id="11_fase12"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j6m5e"]
 texture = ExtResource("1_ykefp")
