@@ -29,7 +29,7 @@ func add_coins(amount: int) -> void:
 
 	_total_coins += amount
 	coins_changed.emit(_total_coins)
-	save_game()
+	#save_game()
 
 
 func spend_coins(amount: int) -> bool:
@@ -41,7 +41,7 @@ func spend_coins(amount: int) -> bool:
 
 	_total_coins -= amount
 	coins_changed.emit(_total_coins)
-	save_game()
+	#save_game()
 
 	return true
 
@@ -56,7 +56,7 @@ func add_bullets(amount: int) -> void:
 
 	_total_bullets += amount
 	bullets_changed.emit(_total_bullets)
-	save_game()
+	#save_game()
 
 
 func get_bullets() -> int:
@@ -69,7 +69,7 @@ func consume_bullet() -> bool:
 
 	_total_bullets -= 1
 	bullets_changed.emit(_total_bullets)
-	save_game()
+	##save_game()
 
 	return true
 
@@ -84,7 +84,7 @@ func buy_bullet() -> bool:
 	coins_changed.emit(_total_coins)
 	bullets_changed.emit(_total_bullets)
 
-	save_game()
+	##save_game()
 
 	return true
 
@@ -99,7 +99,7 @@ func start_level(level_number: int) -> void:
 	if _total_bullets <= 0:
 		_total_bullets=1
 		bullets_changed.emit(get_bullets())
-		save_game()
+		#save_game()
 
 func get_level_time() -> float:
 	if _level_start_msec <= 0:
@@ -133,7 +133,7 @@ func finish_level() -> int:
 		current_level + 1
 	)
 
-	save_game()
+	#save_game()
 
 	return reward
 
@@ -144,37 +144,37 @@ func get_next_level_path() -> String:
 	return "res://fases/fase%d.tscn" % next_level
 
 
-func save_game() -> void:
-	var config := ConfigFile.new()
-
-	config.set_value(
-		"player",
-		"coins",
-		_total_coins
-	)
-
-	config.set_value(
-		"player",
-		"bullets",
-		_total_bullets
-	)
-
-	config.set_value(
-		"progress",
-		"current_level",
-		current_level
-	)
-
-	config.set_value(
-		"progress",
-		"unlocked_level",
-		unlocked_level
-	)
-
-	var error := config.save(SAVE_PATH)
-
-	if error != OK:
-		print("Erro ao salvar o jogo: ", error)
+#func #save_game() -> void:
+	#var config := ConfigFile.new()
+#
+	#config.set_value(
+		#"player",
+		#"coins",
+		#_total_coins
+	#)
+#
+	#config.set_value(
+		#"player",
+		#"bullets",
+		#_total_bullets
+	#)
+#
+	#config.set_value(
+		#"progress",
+		#"current_level",
+		#current_level
+	#)
+#
+	#config.set_value(
+		#"progress",
+		#"unlocked_level",
+		#unlocked_level
+	#)
+#
+	#var error := config.save(SAVE_PATH)
+#
+	#if error != OK:
+		#print("Erro ao salvar o jogo: ", error)
 
 
 func load_game() -> void:
@@ -183,7 +183,7 @@ func load_game() -> void:
 
 	# Primeiro início do jogo: usa uma moeda e uma bala.
 	if error != OK:
-		save_game()
+		#save_game()
 		return
 
 	_total_coins = int(

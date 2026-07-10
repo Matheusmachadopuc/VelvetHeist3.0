@@ -365,7 +365,7 @@ func _on_animated_sprite_2d_frame_changed():
 		return     
 	var animacoes_de_movimento: Array = ["up", "down", "left", "right"]  
 	if sprite.animation in animacoes_de_movimento:       
-		if sprite.frame == 1 || 4 || 2:
+		if sprite.frame in [1, 2, 4]:
 			if has_node("AudioStreamPlayer"):
 				$AudioStreamPlayer.pitch_scale = randf_range(0.8, 1.2)
 				$AudioStreamPlayer.play()

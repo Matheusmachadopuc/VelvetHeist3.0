@@ -1,12 +1,12 @@
-extends Node2D
+extends Control
 
-@onready var vitoria_label: Label = $vitoria
-@onready var moedas_label: Label = $MoedasLabel
-@onready var balas_label: Label = $BalasLabel
-@onready var comprar_bala_button: Button = $ComprarBalaButton
-@onready var mensagem_loja: Label = $MensagemLoja
-@onready var proxima_fase_button: Button = $ProximaFaseButton
-@onready var sair_button: Button = $SairButton
+@onready var vitoria_label: Label = $"%vitoria"
+@onready var moedas_label: Label = $"%MoedasLabel"
+@onready var balas_label: Label = $"%BalasLabel"
+@onready var comprar_bala_button: Button = $"%ComprarBalaButton"
+@onready var mensagem_loja: Label = $"%MensagemLoja"
+@onready var proxima_fase_button: Button = $"%ProximaFaseButton"
+@onready var sair_button: Button = $"%SairButton"
 
 
 func _ready() -> void:
@@ -85,7 +85,7 @@ func _on_comprar_bala_button_pressed() -> void:
 
 
 func verificar_proxima_fase() -> void:
-	var caminho := Global.get_next_level_path()
+	var caminho = Global.get_next_level_path()
 
 	if ResourceLoader.exists(caminho):
 		proxima_fase_button.disabled = false
@@ -97,7 +97,7 @@ func verificar_proxima_fase() -> void:
 
 
 func _on_proxima_fase_button_pressed() -> void:
-	var caminho := Global.get_next_level_path()
+	var caminho = Global.get_next_level_path()
 
 	if not ResourceLoader.exists(caminho):
 		mensagem_loja.text = (
@@ -105,11 +105,16 @@ func _on_proxima_fase_button_pressed() -> void:
 		)
 		return
 
-	Global.save_game()
+	#Global.save_game()
 
 	get_tree().change_scene_to_file(caminho)
 
 
 func _on_sair_button_pressed() -> void:
-	Global.save_game()
+	#Global.save_game()
 	get_tree().quit()
+
+
+func _on_voltar_hub_button_pressed() -> void:
+	#Global.save_game()
+	get_tree().change_scene_to_file("res://gameHubEEtc/Menu/main_menu.tscn")

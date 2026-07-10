@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://ds0hjacr24h1v" path="res://personagens/player/ChatGPT_Image_8_de_jul._de_2026__09_15_18-removebg-preview.png" id="3_cfyub"]
 [ext_resource type="Texture2D" uid="uid://dx07dupiis6bj" path="res://imagensSprites/ChatGPT Image 5 de jun. de 2026, 10_11_02.png" id="4_m7xsi"]
 [ext_resource type="AudioStream" uid="uid://51yousmja6n7" path="res://Musiconas/passo.ogg" id="5_cfyub"]
-[ext_resource type="AudioStream" uid="uid://d14dxhoix6e3k" path="res://Musiconas/SomTiro.wav" id="6_mtyld"]
-[ext_resource type="PackedScene" path="res://gameHubEEtc/hud.tscn" id="7_hud"]
+[ext_resource type="AudioStream" uid="uid://cnf4g2idkx2dg" path="res://Musiconas/gunshot_melhor.mp3" id="6_n6552"]
+[ext_resource type="PackedScene" uid="uid://br1ei7s2ewc11" path="res://gameHubEEtc/hud.tscn" id="7_hud"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m7xsi"]
 atlas = ExtResource("3_cfyub")
@@ -203,9 +203,9 @@ volume_db = -16.0
 pitch_scale = 0.76
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="." unique_id=2142617348]
-stream = ExtResource("6_mtyld")
+stream = ExtResource("6_n6552")
 
-[node name="HUD" parent="." instance=ExtResource("7_hud")]
+[node name="HUD" parent="." unique_id=10775716 instance=ExtResource("7_hud")]
 
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="body_entered" from="origemTiro/Area2D" to="." method="_on_area_2d_body_entered"]

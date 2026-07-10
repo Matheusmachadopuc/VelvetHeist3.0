@@ -8,6 +8,7 @@
 [ext_resource type="Shader" uid="uid://c663jokdsbvao" path="res://gameHubEEtc/Menu/main_menu.gdshader" id="6_3fiuf"]
 [ext_resource type="Texture2D" uid="uid://c50vdvfk8cpsc" path="res://imagensSprites/LogoJogo/Gemini_Generated_Image_311myy311myy311m-removebg-preview.png" id="7_72js7"]
 [ext_resource type="AudioStream" uid="uid://bv6x6py0t8qw6" path="res://Musiconas/2jogo furto quiet plin plin_Master.wav" id="8_72js7"]
+[ext_resource type="Theme" path="res://gameHubEEtc/Menu/cyberpunk_theme.tres" id="9_theme"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1q3g4"]
 shader = ExtResource("6_3fiuf")
@@ -24,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("9_theme")
 script = ExtResource("1_06t4h")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=460859058]
@@ -68,6 +70,7 @@ offset_left = 808.0
 offset_top = 368.0
 offset_right = 1100.0
 offset_bottom = 448.0
+theme_override_font_sizes/font_size = 32
 text = "Start"
 
 [node name="Button2" type="Button" parent="." unique_id=912503320]
@@ -76,6 +79,7 @@ offset_left = 800.0
 offset_top = 576.0
 offset_right = 1120.0
 offset_bottom = 656.0
+theme_override_font_sizes/font_size = 32
 text = "Quit"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1296094880]
