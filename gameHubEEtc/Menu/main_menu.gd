@@ -8,5 +8,5 @@ func _on_button_pressed() -> void:
 
 
 func _on_button_2_pressed() -> void:
-	Global.save_game()
+	#Global.save_game()
 	get_tree().quit()
