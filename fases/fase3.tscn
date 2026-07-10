@@ -634,7 +634,7 @@ color = Color(0.050708726, 0.07016479, 0.09985284, 1)
 position = Vector2(182, 644)
 scale = Vector2(0.25, 0.25)
 
-[node name="door" parent="." unique_id=1069083300 instance=ExtResource("10_svdy8")]
+[node name="door" parent="." unique_id=1069083300 groups=["door"] instance=ExtResource("10_svdy8")]
 position = Vector2(1915, 576)
 scale = Vector2(1, 1)
 
