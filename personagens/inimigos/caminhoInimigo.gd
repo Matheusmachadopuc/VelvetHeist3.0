@@ -29,11 +29,20 @@ func _process(delta: float) -> void:
 		set_process(false)
 		return
 
+	# Normalize the enemy global scale to match fase1 size (approx 0.48)
+	inimigo.global_scale = Vector2(0.48, 0.48)
+
 	# Guarda a posição antes de andar
 	var posicao_anterior = global_position
 
-	# Move pelo caminho
-	progress += speed * delta
+	# Calculate speed compensation factor based on parent's scale
+	var parent_scale = get_parent().scale
+	var scale_factor = (parent_scale.x + parent_scale.y) / 2.0
+	if scale_factor <= 0.0:
+		scale_factor = 1.0
+
+	# Move pelo caminho (compensated speed)
+	progress += (speed / scale_factor) * delta
 
 	# Descobre para qual direção o inimigo está andando
 	var movimento = global_position - posicao_anterior

@@ -16,13 +16,28 @@ func _ready():
 		$Sprite2D.visible = true
 
 
-func _on_vision_area_body_entered(body):
-	print("Nome:", body.name)
-	print("Grupos:", body.get_groups())
-	print("Tem die?", body.has_method("die"))
+func _physics_process(_delta: float) -> void:
+	var vision_area = get_node_or_null("VisionArea")
+	if is_instance_valid(vision_area):
+		for body in vision_area.get_overlapping_bodies():
+			if body.is_in_group("player"):
+				if has_line_of_sight(body):
+					player_caught(body)
 
-	if body.is_in_group("player"):
-		body.die()
+func has_line_of_sight(target: Node2D) -> bool:
+	if not is_instance_valid(target):
+		return false
+	var space := get_world_2d().direct_space_state
+	var query := PhysicsRayQueryParameters2D.create(global_position, target.global_position)
+	query.exclude = [self]
+	var result := space.intersect_ray(query)
+	if result.is_empty():
+		return true
+	return result.get("collider") == target
+
+func _on_vision_area_body_entered(body):
+	# Kept to prevent signal errors in the editor, checks are handled in _physics_process
+	pass
 
 
 func player_caught(player):

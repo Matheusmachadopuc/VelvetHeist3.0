@@ -2337,9 +2337,9 @@ sources/0 = SubResource("TileSetAtlasSource_r4hmm")
 
 [sub_resource type="Curve2D" id="Curve2D_rvc2c"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 1682, -842, 0, 0, 0, 0, 1674, 866, 0, 0, 0, 0, 855, 883, 0, 0, 0, 0, 859, -830, 0, 0, 0, 0, 1682, -830)
+"points": PackedVector2Array(0, 0, 0, 0, 1682, -842, 0, 0, 0, 0, 1674, 866, 0, 0, 0, 0, 855, 883, 0, 0, 0, 0, 859, -830, 0, 0, 0, 0, 1682, -830, 0, 0, 0, 0, 1736.2981, -717.3258)
 }
-point_count = 5
+point_count = 6
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_rvc2c"]
 polygon = PackedVector2Array(161, 192, 161, 799, 448, 801, 448, 192)
@@ -2421,7 +2421,8 @@ occluder = SubResource("OccluderPolygon2D_ljlxj")
 occluder = SubResource("OccluderPolygon2D_3fh2y")
 
 [node name="door" parent="." unique_id=1069083300 groups=["door"] instance=ExtResource("10_3xd5u")]
-position = Vector2(244, 949)
+position = Vector2(235, 1067)
+rotation = 1.5707964
 script = ExtResource("11_hl6xk")
 metadata/_edit_group_ = true
 
