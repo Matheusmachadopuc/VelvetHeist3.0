@@ -624,7 +624,6 @@ tile_map_data = PackedByteArray("AAAAAAAAAAACAAkAAFAAAAkAAAACAAkAAAAAAAoAAAACAAk
 tile_set = SubResource("TileSet_rddqt")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=529083419]
-visible = false
 position = Vector2(1839, 88)
 rotation = -1.5695587
 scale = Vector2(0.53058803, 0.2083861)
