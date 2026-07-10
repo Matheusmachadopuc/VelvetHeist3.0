@@ -28,6 +28,7 @@ var ultima_direcao: String = "down"
 @onready var origem_tiro: Node2D = $origemTiro
 @onready var raycast: RayCast2D = $origemTiro/RayCast2D
 @onready var laser_line: Line2D = $origemTiro/RayCast2D/Line2D
+@onready var som_tiro: AudioStreamPlayer = $SomTiro
 
 
 
@@ -145,6 +146,8 @@ func shoot():
 	if not Global.consume_bullet():
 		print("SEM MUNIÇÃO!")
 		return
+		
+	$AudioStreamPlayer2.play()
 
 	var bullet = bullet_scene.instantiate()
 
@@ -355,3 +358,14 @@ func iniciar_falha_lanterna() -> void:
 	multiplicador_falha = 1.0
 	point_light.enabled = true
 	falha_ativa = false
+
+
+func _on_animated_sprite_2d_frame_changed():
+	if velocity == Vector2.ZERO:
+		return     
+	var animacoes_de_movimento: Array = ["up", "down", "left", "right"]  
+	if sprite.animation in animacoes_de_movimento:       
+		if sprite.frame == 1 || 4 || 2:
+			if has_node("AudioStreamPlayer"):
+				$AudioStreamPlayer.pitch_scale = randf_range(0.8, 1.2)
+				$AudioStreamPlayer.play()
