@@ -4,9 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bg2eemvugoi6u" path="res://imagensSprites/Tech Dungeon Roguelite - Asset Pack (DEMO)/tileset x1.png" id="2_1ln3h"]
 [ext_resource type="PackedScene" uid="uid://d2bh0ixck0sbm" path="res://personagens/player/player.tscn" id="3_n2da5"]
 [ext_resource type="PackedScene" uid="uid://bddgodd26arf3" path="res://fases/portaFase.tscn" id="4_jml6w"]
-[ext_resource type="Script" uid="uid://bareqk4qq1y5f" path="res://personagens/inimigos/caminhoInimigo.gd" id="5_p6xnu"]
-[ext_resource type="PackedScene" uid="uid://ndas58jurts0" path="res://personagens/inimigos/inimigo.tscn" id="6_d7elr"]
-[ext_resource type="PackedScene" uid="uid://bkhr1bw0ybqbg" path="res://plus/tocha.tscn" id="7_1ln3h"]
+[ext_resource type="PackedScene" uid="uid://cuytxxjvbodox" path="res://fases/quadrado_inimigos.tscn" id="5_u1ytg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_la6ux"]
 texture = ExtResource("2_1ln3h")
@@ -539,18 +537,6 @@ texture = ExtResource("2_1ln3h")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_j8j31")
 
-[sub_resource type="Curve2D" id="Curve2D_q65om"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 682, 137, 0, 0, 0, 0, 668, 1030, 0, 0, 0, 0, 682, 137)
-}
-point_count = 3
-
-[sub_resource type="Curve2D" id="Curve2D_koroh"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 558, 979, 0, 0, 0, 0, 552, 130, 0, 0, 0, 0, 556, 979)
-}
-point_count = 3
-
 [node name="Fase5" type="Node2D" unique_id=1207632394]
 script = ExtResource("1_eqlhf")
 
@@ -571,166 +557,45 @@ scale = Vector2(0.53058803, 0.2083861)
 color = Color(0.050708726, 0.07016479, 0.09985284, 1)
 
 [node name="Player" parent="." unique_id=1740235856 instance=ExtResource("3_n2da5")]
-position = Vector2(284, 596)
+position = Vector2(203, 642)
 scale = Vector2(0.25, 0.25)
 
 [node name="door" parent="." unique_id=1069083300 instance=ExtResource("4_jml6w")]
 position = Vector2(1915, 576)
 scale = Vector2(1, 1)
 
-[node name="Path2D" type="Path2D" parent="." unique_id=87699693]
-curve = SubResource("Curve2D_q65om")
+[node name="Node2D" parent="." unique_id=300724688 instance=ExtResource("5_u1ytg")]
+position = Vector2(154, 514)
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=749272034]
-position = Vector2(682, 137)
-rotation = 1.5864725
-script = ExtResource("5_p6xnu")
+[node name="Node2D2" parent="." unique_id=1152579267 instance=ExtResource("5_u1ytg")]
+position = Vector2(-231, 639)
 
-[node name="inimigo" parent="Path2D/PathFollow2D" unique_id=478533006 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
+[node name="Node2D3" parent="." unique_id=657467473 instance=ExtResource("5_u1ytg")]
+position = Vector2(134, -160)
 
-[node name="Path2D2" type="Path2D" parent="." unique_id=726546521]
-position = Vector2(200, 0)
-curve = SubResource("Curve2D_q65om")
+[node name="Node2D4" parent="." unique_id=193310904 instance=ExtResource("5_u1ytg")]
+position = Vector2(-567, 130)
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2" unique_id=1089143870]
-position = Vector2(682, 137)
-rotation = 1.5864725
-script = ExtResource("5_p6xnu")
+[node name="Node2D5" parent="." unique_id=1084887318 instance=ExtResource("5_u1ytg")]
+position = Vector2(-246, 2)
 
-[node name="inimigo" parent="Path2D2/PathFollow2D" unique_id=783888660 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
+[node name="Node2D6" parent="." unique_id=1717315306 instance=ExtResource("5_u1ytg")]
+position = Vector2(-575, -169)
 
-[node name="Path2D3" type="Path2D" parent="." unique_id=4767471]
-position = Vector2(400, 0)
-curve = SubResource("Curve2D_q65om")
+[node name="Node2D7" parent="." unique_id=740490345 instance=ExtResource("5_u1ytg")]
+position = Vector2(128, 195)
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D3" unique_id=1867758826]
-position = Vector2(682, 137)
-rotation = 1.5864725
-script = ExtResource("5_p6xnu")
+[node name="Node2D10" parent="." unique_id=1815732064 instance=ExtResource("5_u1ytg")]
+position = Vector2(526, 641)
 
-[node name="inimigo" parent="Path2D3/PathFollow2D" unique_id=119166835 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
+[node name="Node2D11" parent="." unique_id=191247277 instance=ExtResource("5_u1ytg")]
+position = Vector2(451, 407)
 
-[node name="Path2D4" type="Path2D" parent="." unique_id=1200778567]
-position = Vector2(600, 0)
-curve = SubResource("Curve2D_q65om")
+[node name="Node2D12" parent="." unique_id=2051451505 instance=ExtResource("5_u1ytg")]
+position = Vector2(444, 28)
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D4" unique_id=1932944917]
-position = Vector2(682, 137)
-rotation = 1.5864725
-script = ExtResource("5_p6xnu")
+[node name="Node2D8" parent="." unique_id=287959890 instance=ExtResource("5_u1ytg")]
+position = Vector2(-571, 431)
 
-[node name="inimigo" parent="Path2D4/PathFollow2D" unique_id=966453205 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
-
-[node name="Path2D5" type="Path2D" parent="." unique_id=746495017]
-position = Vector2(800, 0)
-curve = SubResource("Curve2D_q65om")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D5" unique_id=133904322]
-position = Vector2(682, 137)
-rotation = 1.5864725
-script = ExtResource("5_p6xnu")
-
-[node name="inimigo" parent="Path2D5/PathFollow2D" unique_id=2050930092 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
-
-[node name="Path2D6" type="Path2D" parent="." unique_id=733349902]
-position = Vector2(1000, 0)
-curve = SubResource("Curve2D_q65om")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D6" unique_id=988877017]
-position = Vector2(682, 137)
-rotation = 1.5864725
-script = ExtResource("5_p6xnu")
-
-[node name="inimigo" parent="Path2D6/PathFollow2D" unique_id=647825257 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
-
-[node name="Path2D7" type="Path2D" parent="." unique_id=1645543058]
-curve = SubResource("Curve2D_koroh")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D7" unique_id=1340989471]
-position = Vector2(558, 979)
-rotation = -1.5778633
-script = ExtResource("5_p6xnu")
-
-[node name="inimigo" parent="Path2D7/PathFollow2D" unique_id=1805384203 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
-
-[node name="Path2D8" type="Path2D" parent="." unique_id=1302619866]
-position = Vector2(200, 0)
-curve = SubResource("Curve2D_koroh")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D8" unique_id=723142700]
-position = Vector2(558, 979)
-rotation = -1.5778633
-script = ExtResource("5_p6xnu")
-
-[node name="inimigo" parent="Path2D8/PathFollow2D" unique_id=1070841732 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
-
-[node name="Path2D9" type="Path2D" parent="." unique_id=1865139274]
-position = Vector2(400, 0)
-curve = SubResource("Curve2D_koroh")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D9" unique_id=1788248819]
-position = Vector2(558, 979)
-rotation = -1.5778633
-script = ExtResource("5_p6xnu")
-
-[node name="inimigo" parent="Path2D9/PathFollow2D" unique_id=1110069444 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
-
-[node name="Path2D10" type="Path2D" parent="." unique_id=1281158541]
-position = Vector2(600, 0)
-curve = SubResource("Curve2D_koroh")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D10" unique_id=796968368]
-position = Vector2(558, 979)
-rotation = -1.5778633
-script = ExtResource("5_p6xnu")
-
-[node name="inimigo" parent="Path2D10/PathFollow2D" unique_id=1921203903 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
-
-[node name="Path2D11" type="Path2D" parent="." unique_id=650488947]
-position = Vector2(800, 0)
-curve = SubResource("Curve2D_koroh")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D11" unique_id=878782182]
-position = Vector2(558, 979)
-rotation = -1.5778633
-script = ExtResource("5_p6xnu")
-
-[node name="inimigo" parent="Path2D11/PathFollow2D" unique_id=1655387362 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
-
-[node name="Path2D12" type="Path2D" parent="." unique_id=1324553819]
-position = Vector2(1000, 0)
-curve = SubResource("Curve2D_koroh")
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D12" unique_id=164988130]
-position = Vector2(558, 979)
-rotation = -1.5778633
-script = ExtResource("5_p6xnu")
-
-[node name="inimigo" parent="Path2D12/PathFollow2D" unique_id=1688213073 instance=ExtResource("6_d7elr")]
-position = Vector2(0.03741455, 8.000061)
-scale = Vector2(0.5, 0.5)
-
-[node name="Tocha" parent="." unique_id=997647205 instance=ExtResource("7_1ln3h")]
-position = Vector2(832, 384)
+[node name="Node2D9" parent="." unique_id=764215755 instance=ExtResource("5_u1ytg")]
+position = Vector2(-248, 323)

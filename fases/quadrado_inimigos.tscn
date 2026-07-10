@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://cuytxxjvbodox"]
+
+[ext_resource type="PackedScene" uid="uid://bkhr1bw0ybqbg" path="res://plus/tocha.tscn" id="1_rl8ai"]
+[ext_resource type="Script" uid="uid://bareqk4qq1y5f" path="res://personagens/inimigos/caminhoInimigo.gd" id="2_2hlge"]
+[ext_resource type="PackedScene" uid="uid://ndas58jurts0" path="res://personagens/inimigos/inimigo.tscn" id="3_yq37v"]
+
+[sub_resource type="Curve2D" id="Curve2D_1ln3h"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 546, 239, 0, 0, 0, 0, 787, 231, 0, 0, 0, 0, 797, 392, 0, 0, 0, 0, 548, 395, 0, 0, 0, 0, 546, 241)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_n2da5"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 788, 235, 0, 0, 0, 0, 795, 394, 0, 0, 0, 0, 551, 399, 0, 0, 0, 0, 551, 237, 0, 0, 0, 0, 788, 234)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_jml6w"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 581.3247, 239.11414, 0, 0, 0, 0, 580.0491, -4.901001, 0, 0, 0, 0, 737.0734, -7.791382, 0, 0, 0, 0, 740.3561, 235.23792, 0, 0, 0, 0, 582.3317, 238.12122)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_p6xnu"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 982.70667, 29.987518, 0, 0, 0, 0, 982.4592, 188.99992, 0, 0, 0, 0, 742.4549, 187.60767, 0, 0, 0, 0, 738.6179, 34.538116, 0, 0, 0, 0, 981.6926, 30.973267)
+}
+point_count = 5
+
+[node name="Node2D" type="Node2D" unique_id=300724688]
+scale = Vector2(0.25, 0.25)
+metadata/_edit_group_ = true
+
+[node name="Tocha6" parent="." unique_id=997647205 instance=ExtResource("1_rl8ai")]
+position = Vector2(4732.093, 1288)
+scale = Vector2(4, 4)
+metadata/_edit_group_ = true
+
+[node name="Path2D21" type="Path2D" parent="." unique_id=41750656]
+position = Vector2(2028.0933, 36)
+scale = Vector2(4, 4)
+curve = SubResource("Curve2D_1ln3h")
+metadata/_edit_group_ = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D21" unique_id=1077704308]
+position = Vector2(546, 239)
+rotation = -0.033182833
+script = ExtResource("2_2hlge")
+
+[node name="inimigo" parent="Path2D21/PathFollow2D" unique_id=478533006 instance=ExtResource("3_yq37v")]
+position = Vector2(0.03741455, 8.000061)
+scale = Vector2(0.5, 0.5)
+
+[node name="Path2D22" type="Path2D" parent="." unique_id=2142565409]
+position = Vector2(2028.0933, 36)
+scale = Vector2(4, 4)
+curve = SubResource("Curve2D_n2da5")
+metadata/_edit_group_ = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D22" unique_id=1826640051]
+position = Vector2(788, 235)
+rotation = 1.5267996
+script = ExtResource("2_2hlge")
+
+[node name="inimigo" parent="Path2D22/PathFollow2D" unique_id=1946942071 instance=ExtResource("3_yq37v")]
+position = Vector2(0.03741455, 8.000061)
+scale = Vector2(0.5, 0.5)
+
+[node name="Path2D23" type="Path2D" parent="." unique_id=207967682]
+position = Vector2(4260.093, 3952)
+rotation = -1.5778633
+scale = Vector2(4, 4)
+curve = SubResource("Curve2D_jml6w")
+metadata/_edit_group_ = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D23" unique_id=638911836]
+position = Vector2(581.3247, 239.11414)
+rotation = -1.5760239
+script = ExtResource("2_2hlge")
+
+[node name="inimigo" parent="Path2D23/PathFollow2D" unique_id=2102890271 instance=ExtResource("3_yq37v")]
+position = Vector2(0.03741455, 8.000061)
+scale = Vector2(0.5, 0.5)
+
+[node name="Path2D24" type="Path2D" parent="." unique_id=297356401]
+position = Vector2(8160.2227, 1692.3818)
+rotation = 3.1274586
+scale = Vector2(3.9999995, 3.9999995)
+curve = SubResource("Curve2D_p6xnu")
+metadata/_edit_group_ = true
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D24" unique_id=958204882]
+position = Vector2(982.70667, 29.987518)
+rotation = 1.5723524
+script = ExtResource("2_2hlge")
+
+[node name="inimigo" parent="Path2D24/PathFollow2D" unique_id=306993899 instance=ExtResource("3_yq37v")]
+position = Vector2(0.03741455, 8.000061)
+scale = Vector2(0.5, 0.5)
